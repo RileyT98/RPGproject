@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(BluePrintType)
+UCLASS(BlueprintType)
 class ACTIONRPG_API UEnemyRewardData : public UJsonDataAssetBase
 {
 	GENERATED_BODY()
@@ -17,16 +17,16 @@ class ACTIONRPG_API UEnemyRewardData : public UJsonDataAssetBase
 public:
         UEnemyRewardData();
 
-		UPROPERTY(BluePrintReadOnly, EditAnywhere = Reward)
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Reward)
 		float TimeBonusPerKill;
 
-	    UPROPERTY(BluePrintReadOnly, EditAnywhere = Reward)
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Reward)
 	    int MinSoulsDropped;
 
-		UPROPERTY(BluePrintReadOnly, EditAnywhere = Reward)
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Reward)
 		int MaxSoulsDropped;
 
-		UPROPERTY(BluePrintReadOnly, EditAnywhere = Reward)
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Reward)
 		float PotionDropChance;
 
 		virtual TSharedPtr<FJsonObject> ToJson() override;

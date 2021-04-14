@@ -13,7 +13,7 @@ UEnemyRewardData::UEnemyRewardData()
 
 TSharedPtr<FJsonObject> UEnemyRewardData::ToJson()
 {
-	TSharedPtr<FJsonObject> jsonObject = MakeShared<JsonObject>();
+	TSharedPtr<FJsonObject> jsonObject = MakeShared<FJsonObject>();
 
 	jsonObject->SetNumberField("time_bonus_per_kill", TimeBonusPerKill);
 	jsonObject->SetNumberField("min_souls_dropped", MinSoulsDropped);

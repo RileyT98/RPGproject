@@ -18,20 +18,20 @@ public:
 	AJsonManagerActor();
 
 	UPROPERTY(EditAnywhere, Category = JSON)
-	FString JsonInputString;
+		FString JsonInputString;
 
 	UPROPERTY(EditAnywhere, Category = JSON)
-	UJsonDataAssetBase* JsonDataAsset;
+		UJsonDataAssetBase* JsonDataAsset;
 
 	TSharedPtr<FJsonObject> GetJsonFromString(const FString& jsonString);
 	
 	FString GetStringFromJson(TSharedRef<FJsonObject> jsonObject);
 
 	UPROPERTY(EditAnywhere, Category = "Json Editor")
-	FString JsonInput;
+		FString JsonInput;
 	
 	UPROPERTY(EditAnywhere, Category = "Json Editor")
-	FString JsonOutput;
+		FString JsonOutput;
 
 	UPROPERTY(EditAnywhere, Category = "Json Editor")
 	bool bFromJson;

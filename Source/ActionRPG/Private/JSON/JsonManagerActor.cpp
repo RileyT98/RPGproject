@@ -50,18 +50,18 @@ void AJsonManagerActor::PostEditChangeProperty(FPropertyChangedEvent& PropertyCh
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 	FName propertyName = PropertyChangedEvent.Property->GetFName();
 	
-	if (propertyName == GET_MEMBER_NAME_CHECKED(AJsonManagerActor, bFromJson)
+	if (propertyName == GET_MEMBER_NAME_CHECKED(AJsonManagerActor, bFromJson))
 	{
 		bFromJson = false;
 			
-			if (JsonDataAsset != nullptr && !JsonInput.isEmpty())
+			if (JsonDataAsset != nullptr && !JsonInput.IsEmpty())
 			{
 				TSharedPtr<FJsonObject> jsonObject = GetJsonFromString(JsonInput);
 					JsonDataAsset->FromJson(*jsonObject.Get());
 			}
 	}
 
-	if (propertyName == GET_MEMBER_NAME_CHECKED(AJsonManagerActor, bToJson)
+	if (propertyName == GET_MEMBER_NAME_CHECKED(AJsonManagerActor, bToJson))
 	{
 		bToJson = false;
 			if (JsonDataAsset != nullptr)
